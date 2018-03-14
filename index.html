@@ -43,11 +43,26 @@
             <a href="#">Поиск</a>
           </li>
             <div class="search">
-              <!--Здесь будет форма-->
+              <form class="search" action="/echo" method="post">
+                <input type="search" name="search" placeholder="Что ищем?">
+              </form>
             </div>
+
           <li class="login-link">
             <a href="#">Вход
-              <!--Здесь будет форма-->
+              <div class="modal modal-login">
+                <form class="user" method="post" action="/echo">
+                  <p>
+                    <input id="user-email" type="email" name="email" placeholder="Электронная почта" required>
+                  </p>
+                  <p>
+                    <input id="user-password" type="password" name="password" placeholder="Пароль" required>
+                  </p>
+                  <button type="submit">Войти</button>
+                </form>
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </div>
             </a>
           </li>
           <li class="basket">
@@ -165,7 +180,12 @@
 
     <section class="distribution">
       <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
-        <!--Здесь будет форма-->
+        <form class="distribution-email" method="post" action="/echo">
+          <p>
+            <input type="email" name="email" placeholder="Электронная почта">
+          </p>
+          <button type="submit">Отправить</button>
+        </form>
     </section>
 
     <section class="map">
@@ -179,7 +199,7 @@
           <a href="tel:88124502525">8 812 450-25-25</a>
            (с 10 до 20 ежедневно)
         </p>
-          <!--Здесь будет форма-->
+
         <a class="button" href="communication.html">Форма обратной связи</a>
       </section>
   </main>
@@ -228,20 +248,21 @@
     </div>
   </footer>
 
-  <div class="modal modal-login">
-    <!--Здесь будет форма-->
-    <a href="#">Забыли пароль?</a>
-    <a href="#">Новая регистрация</a>
-  </div>
-
-  <div class="modal modal-search">
-    <!--Здесь будет форма-->
-  </div>
-
   <section class="modal modal-communication">
     <span class="modal-close">Закрыть</span>
     <h2>Мы обязательно вам ответим!</h2>
-    <!--Здесь будет форма-->
+    <form class="communication" method="post" action="/echo">
+      <p>
+        <input id="communication-name" type="text" name="login" placeholder="Как вас зовут?">
+      </p>
+      <p>
+        <input id="communication-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+      </p>
+      <p>
+        <textarea id="communication-question" name="question" rows="5">Напишите что-нибудь...</textarea>
+      </p>
+      <button type="submit">Отправить</button>
+    </form>
   </section>
 
   </body>

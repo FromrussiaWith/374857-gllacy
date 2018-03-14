@@ -43,16 +43,49 @@
             <a href="#">Поиск</a>
           </li>
             <div class="search">
-              <!--Здесь будет форма-->
+              <form class="search"action="/echo" method="post">
+                <input type="search" name="search" placeholder="Что ищем?">
+              </form>
             </div>
           <li class="login-link">
             <a href="#">Вход
-              <!--Здесь будет форма-->
+              <div class="modal modal-login">
+                <form class="user" method="post" action="/echo">
+                  <p>
+                    <input id="user-email" type="email" name="email" placeholder="Электронная почта" required>
+                  </p>
+                  <p>
+                    <input id="user-password" type="password" name="password" placeholder="Пароль" required>
+                  </p>
+                  <button type="submit">Войти</button>
+                </form>
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </div>
             </a>
           </li>
           <li class="basket">
             <a href="#">Корзина
-              <!--Здесь будет форма-->
+              <div class="basket-on">
+                <table>
+                  <tr>
+                    <td type="button">удалить</td>
+                    <td>Пломбир с апельсиновым джемом</td>
+                    <td>1,5 кг х<span class="grey">200 руб</span>
+                    </td>
+                    <td>300 руб.</td>
+                  </tr>
+                  <tr>
+                    <td type="button">удалить</td>
+                    <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td>1,5 кг х<span class="grey">300 руб</span>
+                    </td>
+                    <td>450 руб.</td>
+                  </tr>
+                </table>
+              <p> Итого: 750 руб.</p>
+              <a class="button" href="order.html">Оформить заказ</a>
+            </div>
             </a>
           </li>
         </ul>
@@ -72,7 +105,39 @@
     <h1>Сливочное мороженое</h1>
 
     <div class="filter">
-      <!--Здесь будет форма <fieldset> <legend>-->
+      <form action="/echo" method="post">
+        <fieldset>
+          <legend for="filter-popular">Сортировка</legend>
+            <select id="popular" name="popular">
+              <option value="cheap">сначала недорогие</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="fatness">по жирности</option>
+            </select>
+
+            <p>
+              <legend for="filter-price" selected>Цена: от 100 руб. до 500 руб. </legend>
+                <input type="range" min="100" max="500">
+            </p>
+
+            <p>
+              <legend for="filter-fatness">Жирность:</legend>
+                <input type="radio">0%
+                <input type="radio" checked>до 10%
+                <input type="radio">до 30%
+                <input type="radio">выше 30%
+            </p>
+
+            <p>
+              <legend for="filter-additive">Наполнители:<legend>
+                <input type="checkbox" checked>шоколадные
+                <input type="checkbox" checked>сахарные присыпки
+                <input type="checkbox">фрукты
+                <input type="checkbox">сиропы
+                <input type="checkbox">джемы
+            </p>
+        <button type="submit">Применить</button>
+      </fieldset>
+      </form>
     </div>
   <section class="catalog">
     <div class="catalog-ice">
@@ -267,41 +332,21 @@
     </div>
   </footer>
 
-  <div class="modal login">
-    <!--Здесь будет форма-->
-    <a href="#">Забыли пароль?</a>
-    <a href="#">Новая регистрация</a>
-  </div>
-
-  <div class="modal search">
-    <!--Здесь будет форма-->
-  </div>
-
   <section class="modal modal-communication">
     <span class="modal-close">Закрыть</span>
     <h2>Мы обязательно вам ответим!</h2>
-    <!--Здесь будет форма-->
+    <form class="communication" method="post" action="/echo">
+      <p>
+        <input id="communication-name" type="text" name="login" placeholder="Как вас зовут?">
+      </p>
+      <p>
+        <input id="communication-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+      </p>
+      <p>
+        <textarea id="communication-question" name="question" rows="5">Напишите что-нибудь...</textarea>
+      </p>
+      <button type="submit">Отправить</button>
+    </form>
   </section>
-
-  <div class="basket-on">
-    <table>
-      <tr>
-        <td type="button">удалить</td>
-        <td>Пломбир с апельсиновым джемом</td>
-        <td>1,5 кг х<span class="grey">200 руб</span>
-        </td>
-        <td>300 руб.</td>
-      </tr>
-      <tr>
-        <td type="button">удалить</td>
-        <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-        <td>1,5 кг х<span class="grey">300 руб</span>
-        </td>
-        <td>450 руб.</td>
-      </tr>
-    </table>
-  <p> Итого: 750 руб.</p>
-  <a class="button" href="order.html">Оформить заказ</a>
-</div>
 </body>
 </html>
