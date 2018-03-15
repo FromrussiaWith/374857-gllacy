@@ -44,7 +44,8 @@
           </li>
             <div class="search">
               <form class="search"action="/echo" method="post">
-                <input type="search" name="search" placeholder="Что ищем?">
+                <lable for="user-search" class="visually-hidden">Поле поиска</lable>
+                <input id="user-search" type="search" name="search" placeholder="Что ищем?">
               </form>
             </div>
           <li class="login-link">
@@ -52,9 +53,11 @@
               <div class="modal modal-login">
                 <form class="user" method="post" action="/echo">
                   <p>
+                    <laber for="user-email" class="visually-hidden">Введите адрес элекронной почты для входа</lable>
                     <input id="user-email" type="email" name="email" placeholder="Электронная почта" required>
                   </p>
                   <p>
+                    <laber for="user-password" class="visually-hidden">Введите пароль для входа</lable>
                     <input id="user-password" type="password" name="password" placeholder="Пароль" required>
                   </p>
                   <button type="submit">Войти</button>
@@ -69,14 +72,14 @@
               <div class="basket-on">
                 <table>
                   <tr>
-                    <td type="button">удалить</td>
+                    <td class="button">удалить</td>
                     <td>Пломбир с апельсиновым джемом</td>
                     <td>1,5 кг х<span class="grey">200 руб</span>
                     </td>
                     <td>300 руб.</td>
                   </tr>
                   <tr>
-                    <td type="button">удалить</td>
+                    <td class="button">удалить</td>
                     <td>Клубничный пломбир с присыпкой из белого шоколада</td>
                     <td>1,5 кг х<span class="grey">300 руб</span>
                     </td>
@@ -107,39 +110,45 @@
     <div class="filter">
       <form action="/echo" method="post">
         <fieldset>
-          <legend for="filter-popular">Сортировка</legend>
-            <select id="popular" name="popular">
-              <option value="cheap">сначала недорогие</option>
-              <option value="expensive">сначала дорогие</option>
+          <lable for="filter-popular">Сортировка</lable>
+            <select id="filter-popular" name="popular">
+              <option value="cheap">по популярности</option>
+              <option value="cheap-first">сначала недорогие</option>
+              <option value="expensive-first">сначала дорогие</option>
               <option value="fatness">по жирности</option>
             </select>
+        </fieldset>
 
-            <p>
-              <legend for="filter-price" selected>Цена: от 100 руб. до 500 руб. </legend>
-                <input type="range" min="100" max="500">
-            </p>
+        <fieldset>
+          <lable for="filter-price" selected>Цена: от 100 руб. до 500 руб. </lable>
+            <input id="filter-price" type="range" min="100" max="500">
+        </fieldset>
 
-            <p>
-              <legend for="filter-fatness">Жирность:</legend>
-                <input type="radio">0%
-                <input type="radio" checked>до 10%
-                <input type="radio">до 30%
-                <input type="radio">выше 30%
-            </p>
+        <fieldset>
+          <p>
+            <lable for="filter-fatness">Жирность:</lable>
+            <input id="filter-fatness" type="radio">0%
+            <input id="filter-fatness" type="radio" checked>до 10%
+            <input id="filter-fatness" type="radio">до 30%
+            <input id="filter-fatness" type="radio">выше 30%
+         </p>
+        </fieldset>
 
-            <p>
-              <legend for="filter-additive">Наполнители:<legend>
-                <input type="checkbox" checked>шоколадные
-                <input type="checkbox" checked>сахарные присыпки
-                <input type="checkbox">фрукты
-                <input type="checkbox">сиропы
-                <input type="checkbox">джемы
-            </p>
+        <fieldset>
+          <p>
+            <lable for="filter-additive">Наполнители:</lable>
+              <input id="filter-additive" type="checkbox" checked>шоколадные
+              <input id="filter-additive" type="checkbox" checked>сахарные присыпки
+              <input id="filter-additive" type="checkbox">фрукты
+              <input id="filter-additive" type="checkbox">сиропы
+              <input id="filter-additive" type="checkbox">джемы
+          </p>
         <button type="submit">Применить</button>
       </fieldset>
       </form>
     </div>
   <section class="catalog">
+    <h2 class="visually-hidden">Каталог</h2>
     <div class="catalog-ice">
       <img src="img/item-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267px" height="267px">
         <p>310<span class="weight">/кг</span>
@@ -331,22 +340,5 @@
       </p>
     </div>
   </footer>
-
-  <section class="modal modal-communication">
-    <span class="modal-close">Закрыть</span>
-    <h2>Мы обязательно вам ответим!</h2>
-    <form class="communication" method="post" action="/echo">
-      <p>
-        <input id="communication-name" type="text" name="login" placeholder="Как вас зовут?">
-      </p>
-      <p>
-        <input id="communication-email" type="email" name="email" placeholder="Ваша почта для ответа?">
-      </p>
-      <p>
-        <textarea id="communication-question" name="question" rows="5">Напишите что-нибудь...</textarea>
-      </p>
-      <button type="submit">Отправить</button>
-    </form>
-  </section>
 </body>
 </html>
