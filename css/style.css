@@ -31,17 +31,17 @@ a {
 }
 
 .site-navigation a:hover,
-.sub-navigation a:hover{
+.sub-navigation a:hover {
   background-color: #fbded7;
 }
 
 .site-navigation a:active,
-.sub-navigation a:active{
+.sub-navigation a:active {
   background-color: #f6b5a5;
 }
 
 .site-navigation a:focus,
-.sub-navigation a:focus{
+.sub-navigation a:focus {
   background-color: #d07058;
 }
 
@@ -67,7 +67,7 @@ a {
 }
 
 .gift-jam,
-.gift-choco{
+.gift-choco {
   justify-content: center;
   align-items: stretch;
   width:560px;
@@ -108,7 +108,7 @@ a {
   font-weight: bold;
 }
 
-.catalog-ice .view{
+.btn {
   display: inline-block;
   padding: 12px 44px;
   font-weight: 600;
@@ -127,14 +127,20 @@ a {
   cursor: pointer;
 }
 
-.view:hover {
+.btn:hover {
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.view:active {
+.btn:active {
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.catalog-ice.catalog-ice {
+  background-image: url("../img/hit.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .catalog-ice img{
@@ -145,10 +151,6 @@ a {
   line-height:22px;
   font-weight:bold;
   text-align:center;
-}
-
-.catalog-ice {
-  background:url("../img/hit.svg") no-repeat 0 0;
 }
 
 .features {
@@ -230,14 +232,38 @@ a {
   background: #f8f7f4;
 }
 
-.map {
+.map p {
   background: #f6f3e7;
   text-transform: none;
-}
-
-.map p {
   font-size: 14px;
   line-height: 20px;
   font-weight: normal;
   color: #323232;
+}
+
+.main-footer {
+  text-transform: none;
+  display: flex;
+}
+
+.footer-social ul,
+.information-footer ul {
+  list-style: none;
+}
+
+.social-btn,
+.information-footer a{
+  color: #ffffff;
+}
+
+.footer-social {
+  text-align: left;
+}
+
+.information-footer {
+  text-align: center;
+}
+
+.footer-copyright {
+  text-align: center;
 }
