@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Глейси</title>
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
       <a class="main-header-logo" href="index.html">
         <img src="img/logo.svg" alt="GllacyShop" width="154" height="64">
@@ -19,7 +19,7 @@
             <ul class="sub-navigation">
               <li>
                 <a href="#">Новинки</a>
-              </li>
+               </li>
               <li>
                 <a class="active">Сливочное</a>
               </li>
@@ -91,16 +91,16 @@
             </div>
           </li>
         </ul>
-        <p>с 10 до 20, ежедневно<a href="tel:88124502525">8 812 450-25-25</a></p>
+        <p>с 10 до 20, ежедневно<a class="tel-number" href="tel:88124502525">8 812 450-25-25</a></p>
       </nav>
   </header>
 
   <main class="container">
 
-    <div class="bread-crumb">
+    <div class="breadcrumbs">
       <a href="index.html">Главная</a>
       <a href="#">Каталог</a>
-      <a>Сливочное</a>
+      <a class="current">Сливочное</a>
     </div>
 
     <h1>Сливочное мороженое</h1>
@@ -160,7 +160,7 @@
         <a href="#">
           <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
         </a>
-        <a href="#">Быстрый просмотр</a>
+        <a class="view btn" href="#">Быстрый просмотр</a>
       </div>
 
       <div class="catalog-ice">
@@ -169,7 +169,7 @@
         <a href="#">
           <h3>Сливочно-кофейное с кусочками шоколада</h3>
         </a>
-        <a href="#">Быстрый просмотр</a>
+        <a class="view btn" href="#">Быстрый просмотр</a>
       </div>
 
       <div class="catalog-ice">
@@ -178,7 +178,7 @@
         <a href="#">
           <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
         </a>
-        <a href="#">Быстрый просмотр</a>
+        <a class="view btn" href="#">Быстрый просмотр</a>
       </div>
 
       <div class="catalog-ice">
@@ -187,7 +187,7 @@
         <a href="#">
           <h3>Сливочное крем-брюле с карамельной подливкой</h3>
         </a>
-        <a href="#">Быстрый просмотр</a>
+        <a class="view btn" href="#">Быстрый просмотр</a>
       </div>
 
       <div class="catalog-ice">
@@ -196,7 +196,7 @@
         <a href="#">
           <h3>Сливочное с брусничным джемом</h3>
         </a>
-        <a href="#">Быстрый просмотр</a>
+        <a class="view btn" href="#">Быстрый просмотр</a>
       </div>
 
       <div class="catalog-ice">
@@ -205,7 +205,7 @@
         <a href="#">
           <h3>Сливочно-черничное с цельными ягодами черники</h3>
         </a>
-        <a href="#">Быстрый просмотр</a>
+        <a class="view btn" href="#">Быстрый просмотр</a>
       </div>
 
       <div class="catalog-ice">
@@ -214,7 +214,7 @@
         <a href="#">
           <h3>Сливочно-лимонное с карамельной присыпкой</h3>
         </a>
-        <a href="#">Быстрый просмотр</a>
+        <a class="view btn" href="#">Быстрый просмотр</a>
       </div>
 
       <div class="catalog-ice">
@@ -223,7 +223,7 @@
         <a href="#">
           <h3>Сливочное с шоколадной стружкой</h3>
         </a>
-        <a href="#">Быстрый просмотр</a>
+        <a class="view btn" href="#">Быстрый просмотр</a>
       </div>
 
       <div class="catalog-ice">
@@ -232,7 +232,7 @@
         <a href="#">
           <h3>Сливочно-ванильное с кусочками шоколада</h3>
         </a>
-        <a href="#">Быстрый просмотр</a>
+        <a class="view btn" href="#">Быстрый просмотр</a>
       </div>
 
       <div class="catalog-ice">
@@ -241,7 +241,7 @@
         <a href="#">
           <h3>Сливочноe с ментоловым сиропом</h3>
         </a>
-        <a href="#">Быстрый просмотр</a>
+        <a class="view btn" href="#">Быстрый просмотр</a>
       </div>
 
       <div class="catalog-ice">
@@ -250,7 +250,7 @@
         <a href="#">
           <h3>Сливочное с кусочками черного шоколада</h3>
         </a>
-        <a href="#">Быстрый просмотр</a>
+        <a class="view btn" href="#">Быстрый просмотр</a>
       </div>
 
       <div class="catalog-ice">
@@ -259,13 +259,13 @@
         <a href="#">
           <h3>Сливочное с мятным сиропом</h3>
         </a>
-        <a href="#">Быстрый просмотр</a>
+        <a class="view btn" href="#">Быстрый просмотр</a>
       </div>
     </section>
 
     <div class="pagination">
       <ul class="pagination-list">
-        <li class="pagination-prev disable">
+        <li class="pagination-prev" disabled>
           <a href="prevpage.html">prev</a>
         </li>
         <li class="pagination current">
