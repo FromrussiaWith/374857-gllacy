@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Глейси</title>
   </head>
@@ -63,7 +63,7 @@
                     <label for="user-password" class="visually-hidden">Введите пароль для входа</label>
                     <input id="user-password" type="password" name="password" placeholder="Пароль" required>
                   </p>
-                  <button type="submit">Войти</button>
+                  <button class="btn" type="submit">Войти</button>
                 </form>
                 <a href="#">Забыли пароль?</a>
                 <a href="#">Новая регистрация</a>
@@ -87,11 +87,11 @@
                 </tr>
               </table>
               <p>Итого: 750 руб.</p>
-              <a class="button" href="order.html">Оформить заказ</a>
+              <a class="btn" class="button" href="order.html">Оформить заказ</a>
             </div>
           </li>
         </ul>
-        <p>с 10 до 20, ежедневно<a class="tel-number" href="tel:88124502525">8 812 450-25-25</a></p>
+        <p>с 10 до 20, ежедневно<a href="tel:88124502525">8 812 450-25-25</a></p>
       </nav>
   </header>
 
@@ -268,7 +268,7 @@
         <li class="pagination-prev" disabled>
           <a href="prevpage.html">prev</a>
         </li>
-        <li class="pagination current">
+        <li class="pagination-current">
           <a>1</a>
         </li>
         <li class="pagination-item">
