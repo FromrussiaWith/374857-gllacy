@@ -55,8 +55,13 @@ input[type="radio"].visually-hidden {
   margin-left: -20px;
 }
 
+.site-navigation {
+  width: 350px;
+}
+
 .site-navigation > li {
-  display: inline-block;
+/*  display: inline-block;
+  vertical-align: top;*/
   position: relative;
 }
 
@@ -97,21 +102,60 @@ input[type="radio"].visually-hidden {
   justify-content: center;
 }
 
-.site-navigation .user-navigation {
+.main-navigation .user-navigation {
   position: absolute;
-  justify-content: flex-end;
 }
 
+.modal-login a {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  text-decoration: underline;
+  color: #323232;
+}
+
+.modal-login a:hover,
+.modal-login a:focus {
+  color: #ffbc9e;
+}
+/*
 .login-link > .modal-login {
   display: none;
 }
+*/
 
-.basket
+.modal-login {
+  position: absolute;
+  z-index: 2;
+  width: 280px;
+  height: 215px;
+  border-radius: 10px;
+  border: none;
+}
+
+.modal-login .btn {
+  width: 100px;
+  height: 44px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.modal-search {
+  position: absolute;
+  z-index: 2;
+  width: 342px;
+  height: 85px;
+  border-radius: 10px;
+  border: none;
+}
+
+.search input {
+  width: 310px;
+  height: 44px;
+  margin: 21px 18px;
+}
 
 .work-time {
-  position: absolute;
-  display: inline-block;
-  margin-top: 70px;
   margin-left: auto;
   font-size: 14px;
   line-height: 16px;
@@ -204,7 +248,6 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-controls label {
-  position: absolute;
   width: 21px;
   height: 21px;
   margin-right: 8px;
@@ -216,7 +259,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-controls {
-  position: relative;
+  position: absolute;
   bottom: 63px;
   left: 0;
   font-size: 0;
@@ -224,17 +267,17 @@ input[type="radio"].visually-hidden {
 
 #slide-first:checked ~ .site-wrapper {
   background-color: #849d8f;
-  background-image: url("../img/slide1-1.jpg");
+  background-image: url("../img/slide-1.png");
 }
 
 #slide-second:checked ~ .site-wrapper {
   background-color: #8996a6;
-  background-image: url("../img/slide2-2.jpg");
+  background-image: url("../img/slide-2.png");
 }
 
 #slide-third:checked ~ .site-wrapper {
   background-color: #9d8b84;
-  background-image: url("../img/slide3-3.jpg");
+  background-image: url("../img/slide-3.png");
 }
 
 #slide-first:checked ~ .site-wrapper .slide-1,
@@ -350,9 +393,11 @@ input[type="radio"].visually-hidden {
 .catalog-hit .catalog-ice::before {
   background-image: url("../img/hit.svg");
   background-repeat: no-repeat;
-  background-position: 15px 0;
+  background-position: 0 0;
   content: "";
   position: absolute;
+  left: 10px;
+  top: 5px;
   width: 61px;
   height: 61px;
 }
@@ -474,8 +519,24 @@ input[type="radio"].visually-hidden {
   text-transform: none;
   font-size: 14px;
   line-height: 20px;
-  font-weight: normal;
+  font-weight: 400;
   color: #323232;
+}
+
+.map a,
+.map b {
+  font-size: 18px;
+  line-height: 24px;
+  color: #323232;
+  font-weight: 700;
+}
+
+.map .btn {
+  font-size: 24px;
+  line-height: 18px;
+  width: 252px;
+  height: 44px;
+  color: #ffffff;
 }
 
 .breadcrumbs a {
@@ -635,7 +696,6 @@ input[type="radio"].visually-hidden {
 }
 
 .modal {
-  width: 480px;
   background-color: #f8f7f4;
   background-position: 0 0;
   background-repeat: repeat;
