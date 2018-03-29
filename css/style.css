@@ -52,36 +52,75 @@ input[type="radio"].visually-hidden {
 .main-navigation {
   position: relative;
   display: flex;
-  flex-direction: wrap;
+  margin-left: -20px;
 }
 
-.main-navigation a {
+.site-navigation > li {
+  display: inline-block;
+  position: relative;
+}
+
+.site-navigation a {
+  left: 5px;
   display: block;
   background-color: transparent;
   font-size: 16px;
   line-height: 18px;
+  margin-left: -1px;
+  padding: 15px 10px;
 }
 
-.sub-navigation {
+.site-navigation .sub-navigation {
+  width: 150px;
+  left: 1px;
+  background-color: #ffffff;
   position: absolute;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.site-navigation > li:hover .sub-navigation {
+  display: block;
 }
 
 .sub-navigation a {
-  margin: 0;
-  padding: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #323232;
 }
 
+.user-navigation {
+  display: flex;
+  margin-left: auto;
+  justify-content: center;
+}
+
+.site-navigation .user-navigation {
+  position: absolute;
+  justify-content: flex-end;
+}
+
+.login-link > .modal-login {
+  display: none;
+}
+
+.basket
+
 .work-time {
+  position: absolute;
+  display: inline-block;
+  margin-top: 70px;
+  margin-left: auto;
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
 }
 
 .work-time a {
+  display: flex;
+  order: 1;
   font-size: 22px;
   line-height: 24px;
 }
@@ -166,7 +205,6 @@ input[type="radio"].visually-hidden {
 
 .slider-controls label {
   position: absolute;
-  display: inline-block;
   width: 21px;
   height: 21px;
   margin-right: 8px;
@@ -550,6 +588,10 @@ input[type="radio"].visually-hidden {
   text-transform: none;
   display: flex;
   flex-wrap: wrap;
+}
+
+.footer-social a {
+  display: flex;
 }
 
 .information-footer a{
