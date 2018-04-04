@@ -56,12 +56,12 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation {
-  width: 350px;
+  width: 580px;
 }
 
 .site-navigation > li {
-/*  display: inline-block;
-  vertical-align: top;*/
+  display: inline-block;
+  vertical-align: top;
   position: relative;
 }
 
@@ -100,10 +100,12 @@ input[type="radio"].visually-hidden {
   display: flex;
   margin-left: auto;
   justify-content: center;
-}
+  height: 34px;
+  width: 34px;
+  background-image: url("../img/loupe.svg");
+  background-repeat: no-repeat;
+  background-color: #a1b6aa;
 
-.main-navigation .user-navigation {
-  position: absolute;
 }
 
 .modal-login a {
@@ -118,11 +120,10 @@ input[type="radio"].visually-hidden {
 .modal-login a:focus {
   color: #ffbc9e;
 }
-/*
-.login-link > .modal-login {
-  display: none;
+
+.login-link > .modal-login:hover {
+  display: block;
 }
-*/
 
 .modal-login {
   position: absolute;
@@ -133,11 +134,21 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
+.modal-login input {
+  height: 44px;
+  width: 241px;
+  margin: 20px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #999999;
+}
+
 .modal-login .btn {
   width: 100px;
   height: 44px;
   font-size: 18px;
   line-height: 24px;
+  padding: 10px;
 }
 
 .modal-search {
@@ -163,8 +174,6 @@ input[type="radio"].visually-hidden {
 }
 
 .work-time a {
-  display: flex;
-  order: 1;
   font-size: 22px;
   line-height: 24px;
 }
@@ -201,7 +210,7 @@ input[type="radio"].visually-hidden {
 .site-wrapper {
   min-width: 1200px;
   background-color: #849d8f;
-  background-image: url("../img/slide1-1.jpg");
+  background-image: url("../img/slide-1.png");
   background-repeat: no-repeat;
   background-position: top center;
   transition: background-image 0.5s ease, background-color 0.5s ease;
@@ -214,11 +223,11 @@ input[type="radio"].visually-hidden {
 }
 
 .site-wrapper::before {
-  background-image: url("../img/slide2-2.jpg");
+  background-image: url("../img/slide-2.png");
 }
 
 .site-wrapper::after {
-  background-image: url("../img/slide3-3.jpgg");
+  background-image: url("../img/slide-3.png");
 }
 
 .container {
@@ -248,6 +257,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-controls label {
+  display: inline-block;
   width: 21px;
   height: 21px;
   margin-right: 8px;
@@ -334,7 +344,7 @@ input[type="radio"].visually-hidden {
 .btn {
   display: inline-block;
   padding: 12px 44px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   text-align: center;
@@ -415,11 +425,11 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-ice .view {
-    display:none;
+    display: none;
 }
 
 .catalog-ice:hover .view {
-    display:block;
+    display: block;
 }
 
 .features {
@@ -649,10 +659,6 @@ input[type="radio"].visually-hidden {
   text-transform: none;
   display: flex;
   flex-wrap: wrap;
-}
-
-.footer-social a {
-  display: flex;
 }
 
 .information-footer a{
